@@ -16,6 +16,10 @@ except Exception as e:
     # Fail fast with a helpful error message
     raise RuntimeError(f"Failed to load model from {MODEL_PATH}: {e}")
 
+@app.get('/')
+def index():
+    return "✅ Flask Iris Prediction API is running! Use /health and /predict endpoints.", 200
+
 @app.get('/health')
 def health():
     return jsonify(status='ok'), 200
