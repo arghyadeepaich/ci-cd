@@ -18,7 +18,7 @@ except Exception as e:
 
 @app.get('/')
 def index():
-    return "✅ Flask Iris Prediction API is running! Use /health and /predict endpoints.", 200
+    return "✅ Flask Iris Prediction API is running! ", 200
 
 @app.get('/health')
 def health():
